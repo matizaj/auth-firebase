@@ -1,0 +1,13 @@
+<h2>Logowanie</h2>
+<form #formData="ngForm" (ngSubmit)="login(formData)">
+  <div style="display: inline-grid; margin: 10px;">
+    <label>E-mail</label>
+    <input ngModel type="email" name="email" required>
+
+    <label>Haslo</label>
+    <input ngModel type="password" name="password" required>
+
+    <button type="submit" [disabled]="formData.invalid">Zaloguj</button>
+    <button type="button" [disabled]="formData.invalid" (click)="signup(formData)">Rejestracja</button>
+  </div>
+</form>
